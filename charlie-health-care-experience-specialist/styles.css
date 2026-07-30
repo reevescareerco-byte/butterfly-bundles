@@ -591,3 +591,206 @@ footer {
 .next-steps-card h3 { color:#fffaf1; }
 .next-steps-card .interactive-checklist label { background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.18); }
 @media(max-width:760px){ .badge-row,.day-grid{grid-template-columns:1fr;} }
+
+/* Document presentation corrections */
+.resume-paper,
+.letter-paper {
+  width: min(100%, 850px);
+  margin: 0 auto;
+  padding: 58px 64px;
+  background: #ffffff;
+  border: 1px solid #d8d2ca;
+  border-radius: 6px;
+  box-shadow: 0 22px 55px rgba(46, 32, 24, 0.16);
+  color: #1d1d1d;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.46;
+}
+
+.resume-paper {
+  min-height: 1100px;
+}
+
+.resume-paper > header {
+  text-align: center;
+  padding-bottom: 17px;
+  border-bottom: 2px solid #282828;
+}
+
+.resume-paper > header h2 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: .015em;
+  color: #151515;
+}
+
+.resume-paper .resume-headline {
+  margin: 8px 0 5px !important;
+  color: #333 !important;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.resume-paper > header > p:last-child {
+  margin: 0;
+  color: #4d4d4d;
+  font-size: .82rem;
+}
+
+.resume-paper > section {
+  margin-top: 22px;
+}
+
+.resume-paper > section > h3 {
+  margin: 0 0 9px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .82rem;
+  line-height: 1.2;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #1f1f1f;
+}
+
+.resume-paper p {
+  margin: 0 0 8px;
+  font-size: .9rem;
+}
+
+.resume-job {
+  margin-top: 17px;
+}
+
+.resume-job-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: baseline;
+  font-size: .93rem;
+}
+
+.resume-job > p {
+  margin: 2px 0 5px;
+  color: #444;
+  font-style: italic;
+  font-size: .86rem;
+}
+
+.resume-paper ul {
+  margin: 5px 0 0;
+  padding-left: 18px;
+}
+
+.resume-paper li {
+  margin: 4px 0;
+  padding-left: 2px;
+  font-size: .87rem;
+}
+
+.letter-paper {
+  min-height: 1040px;
+  padding-top: 72px;
+  font-size: 1rem;
+}
+
+.letter-paper p {
+  margin: 0 0 22px;
+}
+
+.letter-paper p:first-child {
+  margin-bottom: 30px;
+}
+
+.letter-paper p:last-child {
+  margin-top: 31px;
+}
+
+/* Recruiter Secrets redesign */
+.secret-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.secret-grid article {
+  position: relative;
+  overflow: hidden;
+  min-height: 205px;
+  padding: 28px 26px 25px;
+  background: linear-gradient(155deg, #ffffff 0%, #fbf7f0 100%);
+  border: 1px solid #ded5ca;
+  border-top: 5px solid var(--gold);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(57, 39, 28, .09);
+}
+
+.secret-grid article::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -38px;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background: rgba(200, 162, 74, .10);
+}
+
+.secret-grid article > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--mocha-dark);
+  color: var(--gold-soft);
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+
+.secret-grid h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 9px;
+  color: var(--mocha-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.secret-grid p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .resume-paper,
+  .letter-paper {
+    padding: 38px 24px;
+    border-radius: 4px;
+  }
+  .resume-paper { min-height: auto; }
+  .letter-paper { min-height: auto; }
+  .resume-job-heading { flex-direction: column; gap: 2px; }
+  .secret-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  .resume-paper,
+  .letter-paper {
+    width: 100%;
+    min-height: 0;
+    padding: .55in .65in;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
